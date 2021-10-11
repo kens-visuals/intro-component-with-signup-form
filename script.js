@@ -1,5 +1,6 @@
 const form = document.querySelector('.intro__form');
 const inputs = document.querySelectorAll('.intro__input');
+const successText = document.querySelector('.intro__success');
 const errorTexts = document.querySelectorAll('.intro__error');
 const errorIcons = document.querySelectorAll('.intro__button-error-icon');
 const [firstNameInput, lastNameInput, emailInput, passwordInput] = [...inputs];
@@ -22,13 +23,21 @@ const successMessage = function () {
     [...errorIcons].every((el) =>
       el.classList.contains('intro__button-error-icon--hidden')
     )
-  )
+  ) {
+    successText.innerHTML = 'Submited successfuly';
+    successText.classList.remove('intro__success--hidden');
+
     setTimeout(() => {
+      successText.innerHTML = '';
+      successText.classList.add('intro__success--hidden');
+
       [...inputs].map((el) => {
         el.value = '';
         el.style.outline = `none`;
+        el.style.color = 'hsl(249, 10%, 26%)';
       });
-    }, 1000);
+    }, 1500);
+  }
 };
 
 const setErrorState = function (inputProp, errorText, message) {
@@ -37,6 +46,7 @@ const setErrorState = function (inputProp, errorText, message) {
   );
   errorText.classList.remove('intro__error--hidden');
   inputProp.style.outline = '1px solid hsl(0, 100%, 74%)';
+  inputProp.style.color = 'hsl(0, 100%, 74%)';
   errorText.innerHTML = message;
 };
 
@@ -44,6 +54,7 @@ const setSuccessState = function (inputProp, errorText) {
   findIconParent(inputProp).classList.add('intro__button-error-icon--hidden');
   errorText.classList.add('intro__error--hidden');
   inputProp.style.outline = '1px solid hsl(154, 59%, 51%)';
+  inputProp.style.color = 'hsl(154, 59%, 51%)';
   errorText.innerHTML = '';
 };
 
@@ -60,7 +71,7 @@ const validateEmailInput = function () {
     setErrorState(
       emailInput,
       emailError,
-      `Please provide a valid ${emailInput.name.toLowerCase()} address`
+      `Looks like this is not an ${emailInput.name.toLowerCase()}`
     );
   } else if (!valiedateRegExp(emailInput.value, emailRegExp)) {
     setSuccessState(emailInput, emailError);

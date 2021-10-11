@@ -167,6 +167,15 @@ body {
     padding-right: 0.3rem; }
     .intro__error--hidden {
       visibility: hidden; }
+  .intro__success {
+    color: #38cc8c;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-top: 0.5rem; }
+    .intro__success--hidden {
+      visibility: hidden; }
   .intro__button {
     background-color: #38cc8c;
     font-size: 1.5rem;
@@ -176,6 +185,8 @@ body {
     box-shadow: 0px 4px rgba(56, 204, 140, 0.8), 0px 4px #3e3c49;
     padding: 1.8rem 1.5rem 1.5rem 1.5rem;
     transition: all 0.2s; }
+    .intro__button:focus-visible {
+      outline: 2px solid #3e3c49; }
     @media (hover: hover) {
       .intro__button:hover {
         cursor: pointer;

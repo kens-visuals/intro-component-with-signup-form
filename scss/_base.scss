@@ -1,0 +1,38 @@
+$color-red: hsl(0, 100%, 74%);
+$color-green: hsl(154, 59%, 51%);
+$color-violet: hsl(247, 32%, 48%);
+$color-tertiary: hsl(249, 10%, 26%);
+$color-tertiary--dark: hsl(246, 25%, 77%);
+$color-tertiary--light: hsl(0, 0%, 100%);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: 'Poppins', sans-serif;
+  color: $color-tertiary--light;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  background-image: url(../images/bg-intro-mobile.png);
+  background-color: $color-red;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+
+  @media (min-width: 768px) {
+    background-image: url(../images/bg-intro-desktop.png);
+    align-items: center;
+  }
+}

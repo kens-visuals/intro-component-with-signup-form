@@ -150,19 +150,23 @@ body {
   .intro__button-error-icon {
     position: absolute;
     margin-top: 1.6rem;
-    right: 5rem;
-    visibility: hidden; }
+    right: 5rem; }
+    .intro__button-error-icon--hidden {
+      visibility: hidden; }
     @media (min-width: 1140px) {
       .intro__button-error-icon {
         right: 7rem; } }
   .intro__error {
+    width: 50%;
+    margin-left: auto;
     text-align: right;
     color: #ff7a7a;
     font-style: italic;
     font-size: 1.1rem;
     margin-top: 0.5rem;
-    padding-right: 0.3rem;
-    visibility: hidden; }
+    padding-right: 0.3rem; }
+    .intro__error--hidden {
+      visibility: hidden; }
   .intro__button {
     background-color: #38cc8c;
     font-size: 1.5rem;
@@ -170,7 +174,8 @@ body {
     text-transform: uppercase;
     border: none;
     box-shadow: 0px 4px rgba(56, 204, 140, 0.8), 0px 4px #3e3c49;
-    padding: 1.8rem 1.5rem 1.5rem 1.5rem; }
+    padding: 1.8rem 1.5rem 1.5rem 1.5rem;
+    transition: all 0.2s; }
     @media (hover: hover) {
       .intro__button:hover {
         cursor: pointer;

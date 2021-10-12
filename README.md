@@ -59,11 +59,11 @@ Users should be able to:
 
 ### What I learned
 
-I'm really proud of this project for a couple of reasons. First, I've always avoided working with HTML forms, but in the challenge I had to "face my fears". I think I did pretty good cosidering that this was the first time, using Vanilla JS to validate any type of form. Second, this was the first time when I used Vanilla JS without any outside source, besides RegExp of course (for the record, I know RegExp, but not that good to write an email or password validation), but I mean common it's still pretty cool, eh? 👨🏻‍💻 Anyhow, cool project, simple design, bunch cool stuff to learn and practice.
+I'm really proud of this project for a couple of reasons. First, I've always avoided working with HTML forms, but in the challenge I had to "face my fears". I think I did pretty good considering that this was the first time, using Vanilla JS to validate any type of form. Second, this was the first time when I used Vanilla JS without any outside source, besides RegExp of course (for the record, I know RegExp, but not that good to write an email or password validation), but I mean common it's still pretty cool, eh? 👨🏻‍💻 Anyhow, cool project, simple design, a bunch of cool stuff to learn and practice.
 
 ### Continued development
 
-What comes to continued development, I'd like to sharpen my skills animations and how to manipulate them with Vanilla JS. I'm planning on implementing some basic animations for this project because it looks pretty raw.
+What comes to continued development, I'd like to sharpen my skills of animations and how to manipulate them with Vanilla JS. I'm planning on implementing some basic animations for this project because it looks pretty raw.
 
 ### Useful resources
 

@@ -83,7 +83,7 @@ const validatePasswordInput = function () {
     setErrorState(passwordInput, passwordError, errorMessage(passwordInput));
   } else if (
     (!valiedateRegExp(passwordInput.value, passwordRegExp) &&
-      !/[@$!%*?&]/g.test(passwordInput.value)) ||
+      !/[~`!@#$%^&*()_-+={[}]|\:;<,>\.?]/g.test(passwordInput.value)) ||
     !/\d/g.test(passwordInput.value) ||
     passwordInput.value.length < 8
   ) {

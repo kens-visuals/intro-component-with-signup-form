@@ -33,7 +33,7 @@ Users should be able to:
 
 - Receive an error message when the `form` is submitted if:
   - Password is shorter than 8 characters, doesn't include at least one number or a special character. The message for this error should say _"Password must be minimum 8 characters, include at least one number and one special character"_
-  - Display a message that says _"Submitted Successfully"_ to inditace that the form went through.
+  - Display a message that says _"Submitted Successfully"_ to indicate that the form went through.
   - Change the color of the outline if the input is formatted correctly.
   - Clear all the inputs after a successful submission.
 

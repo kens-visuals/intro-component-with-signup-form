@@ -24,7 +24,7 @@ const successMessage = function () {
       el.classList.contains('intro__button-error-icon--hidden')
     )
   ) {
-    successText.innerHTML = 'Submited successfuly';
+    successText.innerHTML = 'Submitted successfully';
     successText.classList.remove('intro__success--hidden');
 
     setTimeout(() => {
@@ -90,7 +90,7 @@ const validatePasswordInput = function () {
     setErrorState(
       passwordInput,
       passwordError,
-      `${passwordInput.name} must be minimum 8 character, include at least one number and one special character`
+      `${passwordInput.name} must be minimum 8 characters, include at least one number and one special character`
     );
   } else {
     setSuccessState(passwordInput, passwordError);

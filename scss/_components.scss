@@ -201,7 +201,8 @@
     }
 
     @media (hover: hover) {
-      &:hover {
+      &:hover,
+      &:focus-visible {
         cursor: pointer;
         opacity: 0.65;
       }

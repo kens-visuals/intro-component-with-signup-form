@@ -17,7 +17,12 @@ const valiedateRegExp = (testInput, reg) => reg.test(testInput);
 const findIconParent = (iconParent) =>
   [...errorIcons][[...inputs].indexOf(iconParent)];
 
-const errorMessage = (attr) => `${attr.name} cannot be empty`;
+const nameErrorMessage = (attr) => `${attr.name} cannot be empty`;
+const emailErrorMessage = (attr) =>
+  `Looks like this is not an ${attr.name.toLowerCase()}`;
+const passwordErrorMessage = (attr) =>
+  `${attr.name} must be minimum 8 characters, include at least one number and one special character`;
+
 const successMessage = function () {
   if (
     [...errorIcons].every((el) =>
@@ -60,19 +65,15 @@ const setSuccessState = function (inputProp, errorText) {
 
 const validateNameInput = function (inputProp, errorText) {
   inputProp.value == null || inputProp.value === ''
-    ? setErrorState(inputProp, errorText, errorMessage(inputProp))
+    ? setErrorState(inputProp, errorText, nameErrorMessage(inputProp))
     : setSuccessState(inputProp, errorText);
 };
 
 const validateEmailInput = function () {
   if (emailInput.value == null || emailInput.value === '') {
-    setErrorState(emailInput, emailError, errorMessage(emailInput));
+    setErrorState(emailInput, emailError, nameErrorMessage(emailInput));
   } else if (!valiedateRegExp(emailInput.value, emailRegExp)) {
-    setErrorState(
-      emailInput,
-      emailError,
-      `Looks like this is not an ${emailInput.name.toLowerCase()}`
-    );
+    setErrorState(emailInput, emailError, emailErrorMessage(emailInput));
   } else if (!valiedateRegExp(emailInput.value, emailRegExp)) {
     setSuccessState(emailInput, emailError);
   }
@@ -80,17 +81,23 @@ const validateEmailInput = function () {
 
 const validatePasswordInput = function () {
   if (passwordInput.value == null || passwordInput.value === '') {
-    setErrorState(passwordInput, passwordError, errorMessage(passwordInput));
+    setErrorState(
+      passwordInput,
+      passwordError,
+      nameErrorMessage(passwordInput)
+    );
   } else if (
     (!valiedateRegExp(passwordInput.value, passwordRegExp) &&
-      !/[~`!@#$%^&*()_-+={[}]|\:;<,>\.?]/g.test(passwordInput.value)) ||
+      !/[\~\`\!\@\#\$\%\^\&\*\(\)\_\-\+\=\{\[\}\]\|\\\:\;\"\'\<\,\>\.\?\/]/g.test(
+        passwordInput.value
+      )) ||
     !/\d/g.test(passwordInput.value) ||
     passwordInput.value.length < 8
   ) {
     setErrorState(
       passwordInput,
       passwordError,
-      `${passwordInput.name} must be minimum 8 characters, include at least one number and one special character`
+      passwordErrorMessage(passwordInput)
     );
   } else {
     setSuccessState(passwordInput, passwordError);

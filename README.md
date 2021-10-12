@@ -63,7 +63,7 @@ I'm really proud of this project for a couple of reasons. First, I've always avo
 
 ### Continued development
 
-What comes to continued development, I'd like to sharpen my skills to add some cool animations with JS. Later on, I may implement some basic animations for this project because it looks pretty raw.
+What comes to continued development, I'd like to sharpen my skills animations and how to manipulate them with Vanilla JS. I'm planning on implementing some basic animations for this project because it looks pretty raw.
 
 ### Useful resources
 

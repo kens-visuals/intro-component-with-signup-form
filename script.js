@@ -50,6 +50,8 @@ const setErrorState = function (inputProp, errorText, message) {
     'intro__button-error-icon--hidden'
   );
   errorText.classList.remove('intro__error--hidden');
+  inputProp.setAttribute('aria-describedBy', inputProp.id);
+  inputProp.setAttribute('aria-invalid', 'true');
   inputProp.style.outline = '1px solid hsl(0, 100%, 74%)';
   inputProp.style.color = 'hsl(0, 100%, 74%)';
   errorText.innerHTML = message;
@@ -58,6 +60,8 @@ const setErrorState = function (inputProp, errorText, message) {
 const setSuccessState = function (inputProp, errorText) {
   findIconParent(inputProp).classList.add('intro__button-error-icon--hidden');
   errorText.classList.add('intro__error--hidden');
+  inputProp.removeAttribute('aria-describedBy');
+  inputProp.removeAttribute('aria-invalid');
   inputProp.style.outline = '1px solid hsl(154, 59%, 51%)';
   inputProp.style.color = 'hsl(154, 59%, 51%)';
   errorText.innerHTML = '';

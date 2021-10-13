@@ -44,6 +44,7 @@
           <form action="#" class="intro__form">
             <div class="content__input-container">
               <input
+                id="firstName"
                 type="text"
                 name="First Name"
                 class="intro__input"
@@ -62,6 +63,7 @@
 
             <div class="content__input-container">
               <input
+                id="lastName"
                 type="text"
                 name="Last Name"
                 class="intro__input"
@@ -80,6 +82,7 @@
 
             <div class="content__input-container">
               <input
+                id="email"
                 name="Email"
                 class="intro__input"
                 placeholder="Email Address"
@@ -97,6 +100,7 @@
 
             <div class="content__input-container">
               <input
+                id="password"
                 type="password"
                 name="Password"
                 class="intro__input"
@@ -114,6 +118,8 @@
             </div>
 
             <p class="intro__success intro__success--hidden"></p>
+
+            <div aria-live="assertive" id="message"></div>
 
             <button
               class="intro__button"
